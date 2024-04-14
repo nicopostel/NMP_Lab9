@@ -9,7 +9,10 @@ def encode(password):
     return empass
 
 def decode(password):
-    pass
+    decoded = ''
+    for digit in password:
+        decoded += str(int(digit) - 3)
+    return decoded
 
 def main():
     while True:
