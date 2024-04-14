@@ -11,7 +11,10 @@ def encode(password):
     return encoded
 
 def decoder(password):
-
+    decoded = ''
+    for digit in password:
+        decoded += str(int(digit) - 3)
+    return decoded
 
 while menu_option != 3:
     print("Menu\n------------\n1. Encoder\n2. Decoder\n3. Quit")
